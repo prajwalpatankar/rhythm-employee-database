@@ -15,6 +15,8 @@
     $ pip3 install psycopg2-binary  
     $ pip3 install djangorestframework  
     $ pip install django-cors-headers  
+    
+### Note:- Please add your databse details inside '/DjangoAPI/DjangoAPI/setiings.py' in the 'DATABASES' section 
   
   
 ## run backend server

@@ -27,4 +27,4 @@
     $ python manage.py makemigrations emp_details  
     $ python manage.py sqlmigrate emp_details XXXX  
     $ python manage.py migrate  
-    $ python manage.py createsuperuser    //prajwal : rhythm123  
+    $ python manage.py createsuperuser    

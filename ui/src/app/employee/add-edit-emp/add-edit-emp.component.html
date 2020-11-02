@@ -1,0 +1,65 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+
+        <label class="col-sm-2 col-form-label">Employee ID</label>
+        <div class="col-sm-10">
+            <input required type="text" ngModel #emp_val1="ngModel" class="form-control" [(ngModel)]="EmployeeId" placeholder="Enter Employee ID">
+            <div class="alert alert-danger" *ngIf="emp_val1.touched && !emp_val1.valid">ID is required</div>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Employee Name</label>
+        <div class="col-sm-10">
+            <input required type="text" ngModel #emp_val2="ngModel" class="form-control" [(ngModel)]="EmployeeName" placeholder="Enter Employee Name">
+            <div class="alert alert-danger" *ngIf="emp_val2.touched && !emp_val2.valid">Name is required</div>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Date of Birth</label>
+        <div class="col-sm-10">
+            <input required type="date" ngModel #emp_val3="ngModel" [(ngModel)]="DateOfBirth">
+            <div class="alert alert-danger" *ngIf="emp_val3.touched && !emp_val3.valid">Date of Birth is required</div>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Date of joining</label>
+        <div class="col-sm-10">
+            <input required type="date" ngModel #emp_val4="ngModel" [(ngModel)]="DateOfJoining">
+            <div class="alert alert-danger" *ngIf="emp_val4.touched && !emp_val4.valid">Date of Joining is required</div>
+        </div>
+        <label class="col-sm-2 col-form-label">Mobile No.</label>
+        <div class="col-sm-10">
+            <input required type="text" ngModel #emp_val5="ngModel" class="form-control" [(ngModel)]="MobileNo" placeholder="Mobile Number">
+            <div class="alert alert-danger" *ngIf="emp_val5.touched && !emp_val5.valid">Mobile is required</div>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Email Id</label>
+        <div class="col-sm-10">
+            <input required type="text" ngModel #emp_val6="ngModel" class="form-control" [(ngModel)]="EmailId" placeholder="a@b.com">
+            <div class="alert alert-danger" *ngIf="emp_val6.touched && !emp_val6.valid">email is required</div>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Department</label>
+        <div class="col-sm-10">
+            <input required type="text" ngModel #emp_val7="ngModel" class="form-control" [(ngModel)]="Department" placeholder="Department">
+            <div class="alert alert-danger" *ngIf="emp_val7.touched && !emp_val7.valid">Department is required</div>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Designation</label>
+        <div class="col-sm-10">
+            <input required type="text" ngModel #emp_val8="ngModel" class="form-control" [(ngModel)]="Designation" placeholder="Designation">
+            <div class="alert alert-danger" *ngIf="emp_val8.touched && !emp_val8.valid">Designation is required</div>
+        </div>
+
+        <label class="col-sm-2 col-form-label">Location</label>
+        <div class="col-sm-10">
+            <input required type="text" ngModel #emp_val9="ngModel" class="form-control" [(ngModel)]="Location" placeholder="Location">
+            <div class="alert alert-danger" *ngIf="emp_val9.touched && !emp_val9.valid">Location is required</div>
+        </div>
+    </div>
+</div>
+<button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary">
+    Add
+</button>   
+
+<button (click)="updateEmployee()" *ngIf="emp.EmployeeId!=0" class="btn btn-primary">
+    Update
+</button>
